@@ -1,0 +1,8 @@
+dicom2nifti==2.4.8 # bug: https://github.com/icometrix/dicom2nifti/issues/155, fix: https://github.com/lassoan/SlicerTotalSegmentator/issues/72
+nibabel==5.0.1
+nilearn==0.10.0
+numpy>=1.19
+PyYAML==6.0
+pydicom==2.3.1
+SimpleITK==2.2.1
+tqdm==4.65.0
