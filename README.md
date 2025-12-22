@@ -91,7 +91,8 @@ The converter is packaged as a Docker image and expects:
 
 ## 🧩 Additional Notes
 
-* The PET images are converted into **SUV units**.
+* The PET images are converted into **SUV units**. 
+* The time differences between radiotracer administration and image acquisition for SUV conversion are provided in a JSON file. This is done to ensure reproducibility of SUV factors with the autoPET III challenge dataset. However, for general use, we recommend to calculate the time differences directly from the appropriate DICOM tags.
 * The CT images are **resampled** to match PET resolution and spacing.
 * Annotations correspond to **manual segmentations of tumor lesions**.
 * The resulting dataset is **directly compatible** with nnUNet and the AutoPET III challenge pipeline.
