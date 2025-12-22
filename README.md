@@ -6,9 +6,9 @@ Note: The TCIA PSMA-PET-CT-Lesions dataset currently contains a problematic stud
 
 
 ## 📚 Links to Datasets
-- **TCIA Dataset:** [10.7937/R7EP-3X37](https://doi.org/10.7937/R7EP-3X37) 
-- **NIfTI Dataset v1:** [10.57754/FDAT.5bjzn-0vh28](https://doi.org/10.57754/FDAT.5bjzn-0vh28) 
-- **NIfTI Dataset v2:** [10.57754/FDAT.gpeq5-yxy63](https://doi.org/10.57754/FDAT.gpeq5-yxy63) 
+- **TCIA PSMA-PET/CT Dataset:** [10.7937/R7EP-3X37](https://doi.org/10.7937/R7EP-3X37) 
+- **NIfTI PSMA-PET/CT Dataset v1:** [10.57754/FDAT.5bjzn-0vh28](https://doi.org/10.57754/FDAT.5bjzn-0vh28) 
+- **NIfTI PSMA-PET/CT Dataset v2:** [10.57754/FDAT.gpeq5-yxy63](https://doi.org/10.57754/FDAT.gpeq5-yxy63) 
 - **Challenge Dataset:** [AutoPET III Dataset](https://autopet-iii.grand-challenge.org/dataset/)
 
 
@@ -40,10 +40,8 @@ The converter is packaged as a Docker image and expects:
 
 1. **Pull Docker Image**
 
-   *(Note: Docker image will be provided soon)*
-
    ```bash
-   docker pull <dockerhub>/tcia_converter_v1
+   docker pull ghcr.io/clinicaldatascience/tcia-psma-pet-ct-preprocessing:latest
    ```
 
 2. **Run the Docker Container**
@@ -53,7 +51,7 @@ The converter is packaged as a Docker image and expects:
      -v <input-directory>:/in \
      -v <output-directory>:/out \
      -e CONVERT_FLAGS="--skip-existing" \
-     <dockerhub>/tcia_converter_v1
+     ghcr.io/clinicaldatascience/tcia-psma-pet-ct-preprocessing:latest
    ```
 
 
@@ -85,7 +83,7 @@ The converter is packaged as a Docker image and expects:
 
 ### Environment Variables
    - `-e CONVERT_FLAGS="--skip-existing"`: Recommended to skip conversion if output files already exist.
-   - `-e VALIDATE_FLAGS="--validate_hashes"`: Currently not recommended for use with TCIA dataset; only use if input DICOM data is original, not additionally de-faced by TCIA.
+   - `-e VALIDATE_FLAGS="--validate_hashes"`: Currently not recommended for use with TCIA dataset; only use if input DICOM data is original, i.e. not additionally fully de-faced by TCIA.
 
 
 
