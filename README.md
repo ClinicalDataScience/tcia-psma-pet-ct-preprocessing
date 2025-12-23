@@ -40,8 +40,6 @@ The converter is packaged as a Docker image and expects:
 
 1. **Pull Docker Image**
 
-   *Note: Docker image will be made public soon.*
-
    ```bash
    docker pull ghcr.io/clinicaldatascience/tcia-psma-pet-ct-preprocessing:latest
    ```
